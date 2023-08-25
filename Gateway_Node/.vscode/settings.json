@@ -1,0 +1,38 @@
+{
+  "makefile.configurations": [
+    {
+      "name": "contiki_default",
+      "makeArgs": [
+        "TARGET=zoul",
+        "BOARD=remote-revb",
+        "Gateway"
+      ]
+    },
+    {
+      "name": "contiki_upload",
+      "makeArgs": [
+        "TARGET=zoul",
+        "BOARD=remote-revb",
+        "NODEID=0x1313",
+        "Gateway.upload"
+      ]
+    }
+  ],
+  "files.associations": {
+    "stdio.h": "c",
+    "gpio.h": "c",
+    "nvic.h": "c",
+    "contiki.h": "c",
+    "stdlib.h": "c",
+    "project-conf.h": "c",
+    "cc2538-rf.h": "c",
+    "zoul-sensors.h": "c"
+  },
+  "makefile.launchConfigurations": [
+    {
+      "cwd": "/home/derico/group1/Gateway_Node",
+      "binaryPath": "/home/derico/group1/Gateway_Node/Gateway.elf",
+      "binaryArgs": []
+    }
+  ]
+}

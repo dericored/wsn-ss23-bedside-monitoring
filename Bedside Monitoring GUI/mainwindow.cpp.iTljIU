@@ -1,0 +1,184 @@
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+
+    ui->table_patient->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+
+//    ui->table_patient->setRowCount(1);
+//    ui->table_patient->setItem(0,0,new QTableWidgetItem(QString("01")));
+//    ui->table_patient->setItem(0,1,new QTableWidgetItem(QString("90")));
+//    ui->table_patient->setItem(0,2,new QTableWidgetItem(QString("70%")));
+//    ui->table_patient->setItem(0,3,new QTableWidgetItem(QString("Yes")));
+//    ui->table_patient->setItem(0,4,new QTableWidgetItem(QString("Good")));
+//    ui->table_patient->item(0,4)->setBackground(Qt::green);
+
+//    ui->table_patient->insertRow(ui->table_patient->rowCount());
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,0,new QTableWidgetItem(QString("02")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,1,new QTableWidgetItem(QString("50")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,2,new QTableWidgetItem(QString("80%")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,3,new QTableWidgetItem(QString("Yes")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,4,new QTableWidgetItem(QString("Requires Attention")));
+//    ui->table_patient->item(1,4)->setBackground(Qt::yellow);
+//    ui->alert_notif->addItem(QString("02: Requires Attention"));
+//    ui->alert_notif->item(0)->setBackground(Qt::yellow);
+
+//    ui->table_patient->insertRow(ui->table_patient->rowCount());
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,0,new QTableWidgetItem(QString("03")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,1,new QTableWidgetItem(QString("30")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,2,new QTableWidgetItem(QString("40%")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,3,new QTableWidgetItem(QString("Yes")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,4,new QTableWidgetItem(QString("Emergency")));
+//    ui->table_patient->item(2,4)->setBackground(Qt::red);
+//    ui->alert_notif->addItem(QString("03: Emergency"));
+//    ui->alert_notif->item(1)->setBackground(Qt::red);
+
+//    ui->table_patient->insertRow(ui->table_patient->rowCount());
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,0,new QTableWidgetItem(QString("04")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,1,new QTableWidgetItem(QString("80")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,2,new QTableWidgetItem(QString("80%")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,3,new QTableWidgetItem(QString("No")));
+//    ui->table_patient->setItem(ui->table_patient->rowCount()-1,4,new QTableWidgetItem(QString("Not In Bed")));
+//    for (int i=0; i < ui->table_patient->columnCount(); i++) {
+//        ui->table_patient->item(3,i)->setBackground(Qt::gray);
+//    }
+//    ui->alert_notif->addItem(QString("04: Not in Bed"));
+//    ui->alert_notif->item(2)->setBackground(Qt::gray);
+
+    // Dummy Data
+
+    static linkaddr_t add_1;
+    add_1.u8[0] = 0xAA;
+    add_1.u8[1] = 0xBB;
+    add_1.u16 = 0xFFFF;
+
+    static linkaddr_t add_2;
+    add_2.u8[0] = 0xAB;
+    add_2.u8[1] = 0xBA;
+    add_2.u16 = 0xFFFF;
+
+    static struct patient_message patient_1;
+    patient_1.sensor_value = 30;
+    patient_1.Patient_Motion = true;
+    patient_1.history[0] = add_1;
+    patient_1.history[1] = add_2;
+    patient_1.depth = 2;
+
+    static struct patient_message patient_2;
+    patient_2.sensor_value = 90;
+    patient_2.Patient_Motion = true;
+    patient_2.history[0] = add_2;
+    patient_2.history[1] = add_1;
+    patient_2.depth = 2;
+
+    static struct routing_message received_message;
+    received_message.patient_messages[0] = patient_1;
+    received_message.patient_messages[1] = patient_2;
+    received_message.count = 2;
+
+for (int i=0; i < received_message.count; i++) {
+
+        QTableWidget* tp = ui->table_patient;
+        QListWidget* an = ui->alert_notif;
+
+        uint8_t addr = received_message.patient_messages[i].history[0].u8[0];
+        uint16_t bpm = received_message.patient_messages[i].sensor_value;
+        bool in_bed = received_message.patient_messages[i].Patient_Motion;
+
+        if (tp->rowCount() == 0) {
+
+            tp->setRowCount(1);
+            tp->setItem(0,0,new QTableWidgetItem(QString::number(addr)));
+            tp->setItem(0,1,new QTableWidgetItem(QString::number(bpm)));
+            tp->setItem(0,2,new QTableWidgetItem(QString(in_bed ? "True" : "False")));
+            if (!in_bed) {
+                tp->setItem(0,3,new QTableWidgetItem(QString("Not in Bed")));
+                for (int j=0; j < tp->columnCount(); j++) ui->table_patient->item(0,j)->setBackground(Qt::gray);
+            }
+            else if (bpm >= 60 && bpm <= 100) {
+                tp->setItem(0,3,new QTableWidgetItem(QString("Good")));
+                tp->item(0,3)->setBackground(Qt::green);
+            }
+            else if ((bpm > 40 && bpm < 60) || (bpm > 100 && bpm <= 140)) {
+                tp->setItem(0,3,new QTableWidgetItem(QString("Attention")));
+                tp->item(0,3)->setBackground(Qt::yellow);
+            }
+            else if (bpm <= 40 || bpm > 140) {
+                tp->setItem(0,3,new QTableWidgetItem(QString("Emergency")));
+                tp->item(0,3)->setBackground(Qt::red);
+            }
+            else {
+                tp->setItem(0,3,new QTableWidgetItem(QString("Sensor Error!")));
+                tp->item(0,3)->setBackground(Qt::magenta);
+            }
+
+        }
+        else {
+
+            int current_row = tp->rowCount();
+
+            tp->insertRow(current_row);
+            tp->setItem(current_row,0,new QTableWidgetItem(QString::number(addr)));
+            tp->setItem(current_row,1,new QTableWidgetItem(QString::number(bpm)));
+            tp->setItem(current_row,2,new QTableWidgetItem(QString(in_bed ? "True" : "False")));
+            if (!in_bed) {
+                tp->setItem(current_row,3,new QTableWidgetItem(QString("Not in Bed")));
+                for (int j=0; j < tp->columnCount(); j++) ui->table_patient->item(current_row,j)->setBackground(Qt::gray);
+            }
+            else if (bpm >= 60 && bpm <= 100) {
+                tp->setItem(current_row,3,new QTableWidgetItem(QString("Good")));
+                tp->item(current_row,3)->setBackground(Qt::green);
+            }
+            else if ((bpm > 40 && bpm < 60) || (bpm > 100 && bpm <= 140)) {
+                tp->setItem(current_row,3,new QTableWidgetItem(QString("Attention")));
+                tp->item(current_row,3)->setBackground(Qt::yellow);
+            }
+            else if (bpm <= 40 || bpm > 140) {
+                tp->setItem(current_row,3,new QTableWidgetItem(QString("Emergency")));
+                tp->item(current_row,3)->setBackground(Qt::red);
+            }
+            else {
+                tp->setItem(current_row,3,new QTableWidgetItem(QString("Sensor Error!")));
+                tp->item(current_row,3)->setBackground(Qt::magenta);
+            }
+
+        }
+
+    }
+
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+//void MainWindow::on_pushButton_nt_clicked()
+//{
+//    nt = new network_topology(this);
+//    nt->show();
+//}
+
+
+void MainWindow::on_ack_clicked()
+{
+    delete ui->alert_notif->currentItem();
+}
+
+
+void MainWindow::on_checkBox_stateChanged(int arg1)
+{
+    if (arg1) {
+        ui->table_patient->hideRow(1);
+    }
+    else {
+        ui->table_patient->showRow(1);
+    }
+}
+
+
+

@@ -1,0 +1,30 @@
+{
+  "makefile.configurations": [
+    {
+      "name": "contiki_default",
+      "makeArgs": [
+        "TARGET=zoul",
+        "BOARD=remote-revb",
+        "flooding"
+      ]
+    },
+    {
+      "name": "contiki_upload",
+      "makeArgs": [
+        "TARGET=zoul",
+        "BOARD=remote-revb",
+        "flooding.upload"
+      ]
+    }
+  ],
+  "makefile.launchConfigurations": [
+    {
+      "cwd": "/home/derico/group1/Patient_Node",
+      "binaryPath": "/home/derico/group1/Patient_Node/Patient.elf",
+      "binaryArgs": []
+    }
+  ],
+  "files.associations": {
+    "gpio.h": "c"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "name": "linux-gcc-x64",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${HOME}/contiki/",
+        "${HOME}/contiki/core/",
+        "${HOME}/contiki/core/sys/",
+        "${HOME}/contiki/cpu/",
+        "${HOME}/contiki/cpu/cc2538",
+        "${HOME}/contiki/platform/",
+        "${HOME}/contiki/platform/zoul/"
+      ],
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "${default}",
+      "cppStandard": "${default}",
+      "intelliSenseMode": "linux-gcc-x64",
+      "compilerArgs": [
+        ""
+      ],
+      "configurationProvider": "ms-vscode.makefile-tools"
+    }
+  ],
+  "version": 4
+}

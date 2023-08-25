@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="0.315784434">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.315784434" moduleId="org.eclipse.cdt.core.settings" name="Default">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration buildProperties="" description="" id="0.315784434" name="Default" parent="org.eclipse.cdt.build.core.prefbase.cfg">
+					<folderInfo id="0.315784434." name="/" resourcePath="">
+						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.2032484417" name="No ToolChain" resourceTypeBasedDiscovery="false" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
+							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.2032484417.1821220341" name=""/>
+							<builder arguments="TARGET=zoul BOARD=remote-revb routing" command="make" id="org.eclipse.cdt.build.core.settings.default.builder.14771726" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.420279050" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.1713048614" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.276277020" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core/sys&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/dev&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul/dev&quot;"/>
+								</option>
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.434599390" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+							</tool>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.1775909534" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1344941716" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core/sys&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/dev&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul/dev&quot;"/>
+								</option>
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1521571888" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+							</tool>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.54148643" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.2092269221" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core/sys&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/dev&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul/dev&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core&quot;"/>
+								</option>
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.2122035345" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="0.315784434.373178436">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.315784434.373178436" moduleId="org.eclipse.cdt.core.settings" name="Upload">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration buildProperties="" description="" id="0.315784434.373178436" name="Upload" parent="org.eclipse.cdt.build.core.prefbase.cfg">
+					<folderInfo id="0.315784434.373178436." name="/" resourcePath="">
+						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.1172982409" name="No ToolChain" resourceTypeBasedDiscovery="false" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
+							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.1172982409.1397720974" name=""/>
+							<builder arguments="TARGET=zoul BOARD=remote-revb NODEID=0x1313 routing.upload" command="make" id="org.eclipse.cdt.build.core.settings.default.builder.956183032" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.2133539584" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.1505454659" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.2140408343" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core/sys&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu/cc2538&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/dev&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul/dev&quot;"/>
+								</option>
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.323069586" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+							</tool>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.1415030601" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1504027986" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core/sys&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu/cc2538&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/dev&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul/dev&quot;"/>
+								</option>
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.844715316" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+							</tool>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.484372988" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1073252034" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/core/sys&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/cpu/cc2538&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/dev&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/contiki/platform/zoul/dev&quot;"/>
+								</option>
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1351863182" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="L5_Single_Path.null.1287361576" name="L5_Single_Path"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Receiver2">
+			<resource resourceType="PROJECT" workspacePath="/L5_Single_Path"/>
+		</configuration>
+		<configuration configurationName="Repeater_E3">
+			<resource resourceType="PROJECT" workspacePath="/L5_Single_Path"/>
+		</configuration>
+		<configuration configurationName="Sender">
+			<resource resourceType="PROJECT" workspacePath="/L5_Single_Path"/>
+		</configuration>
+		<configuration configurationName="Sender_E4">
+			<resource resourceType="PROJECT" workspacePath="/L5_Single_Path"/>
+		</configuration>
+		<configuration configurationName="Sender_E3">
+			<resource resourceType="PROJECT" workspacePath="/L5_Single_Path"/>
+		</configuration>
+		<configuration configurationName="Receiver_E4">
+			<resource resourceType="PROJECT" workspacePath="/L5_Single_Path"/>
+		</configuration>
+		<configuration configurationName="Upload">
+			<resource resourceType="PROJECT" workspacePath="/L5 - Single Path"/>
+		</configuration>
+		<configuration configurationName="Receiver">
+			<resource resourceType="PROJECT" workspacePath="/L5_Single_Path"/>
+		</configuration>
+		<configuration configurationName="Sender_E2"/>
+		<configuration configurationName="Default">
+			<resource resourceType="PROJECT" workspacePath="/L5_Single_Path"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="0.315784434.373178436">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.290563398;0.290563398.;cdt.managedbuild.tool.gnu.cross.c.compiler.1282009019;cdt.managedbuild.tool.gnu.c.compiler.input.1621202375">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.290563398">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.315784434">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+</cproject>
